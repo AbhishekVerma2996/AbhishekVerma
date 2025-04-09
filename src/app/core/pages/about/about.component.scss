@@ -10,4 +10,11 @@
 
 mat-card {
   margin-bottom: 16px;
+
+  @include mat.card-overrides(
+    (
+      outlined-container-shape: 10px,
+      subtitle-text-color: var(--mat-sys-surface-container-highest),
+    )
+  );
 }

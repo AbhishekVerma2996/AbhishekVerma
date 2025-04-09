@@ -8,12 +8,22 @@
     <mat-card appearance="outlined">
       <mat-card-content>
         <div>
-          <div>
+          <div class="flex items-center justify-between w-full">
             <mat-card-title>{{ item.companyName }}</mat-card-title>
+            <p>Present</p>
           </div>
           <mat-card-subtitle>{{ item.designation }}</mat-card-subtitle>
         </div>
         <p>{{ item.responsibility }}</p>
+        <mat-list>
+          <div mat-subheader>Tech stack I learned and worked</div>
+          @for (stack of item.techStack; track $index) {
+          <mat-list-item>
+            <mat-icon [svgIcon]="stack.icon" matListItemIcon></mat-icon>
+            <p matListItemTitle>{{ stack.label }}</p>
+          </mat-list-item>
+          }
+        </mat-list>
       </mat-card-content>
     </mat-card>
     }
