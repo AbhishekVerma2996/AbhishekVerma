@@ -1,0 +1,75 @@
+@use "@angular/material" as mat;
+
+mat-sidenav-container {
+  height: var(--full);
+
+  //   ===========sidebar============
+  @include mat.sidenav-overrides(
+    (
+      container-width: 218px,
+      container-background-color: var(--mat-sys-secondary),
+      content-background-color: var(--mat-sys-secondary),
+    )
+  );
+
+  //   =========Toolbar==========
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-secondary),
+    )
+  );
+
+  // ==========Button==========
+  @include mat.button-overrides(
+    (
+      filled-container-shape: 4px,
+      outlined-container-shape: 4px,
+    )
+  );
+
+  // ==========Mini Fab button===========
+  @include mat.fab-overrides(
+    (
+      extended-container-height: 56px,
+      container-shape: 4px,
+      small-container-color: var(--mat-sys-primary),
+      small-container-elevation-shadow: 0,
+    )
+  );
+
+  mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  mat-nav-list {
+    a {
+      border-radius: 0 10px 10px 0;
+    }
+
+    a.active {
+      border-left: 4px solid var(--mat-sys-primary);
+    }
+    mat-icon {
+      transform: scale(0.8);
+    }
+  }
+
+  .logo {
+    font-size: var(--mat-sys-display-medium);
+    padding: 8px;
+    text-align: center;
+  }
+}
+
+.container {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  @include mat.card-overrides(
+    (
+      outlined-container-shape: 10px 10px 0 0,
+      outlined-container-color: var(--mat-sys-surface-container-lowest),
+    )
+  );
+}

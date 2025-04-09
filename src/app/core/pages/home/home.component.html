@@ -1,0 +1,76 @@
+<div class="grid items-center mb-3" [ngClass]="gridContainer()">
+  <div [ngClass]="gridOrder()">
+    <div [ngClass]="textSize()">
+      <span>Hello I'm</span>&nbsp;<span class="name"
+        >Ayush Krishan Mandal.</span
+      >
+    </div>
+    <div [ngClass]="textSize()">
+      <span>Fullstack</span>&nbsp;<span class="text-stroke">Developer</span>
+    </div>
+    <div [ngClass]="textSize()">
+      <span>Based In</span>&nbsp;<span class="name">India.</span>
+    </div>
+    <p>
+      With a strong foundation in both front-end and back-end technologies, I
+      enjoy creating seamless and efficient web applications. My expertise
+      includes working with Angular, React, Next.js, and .NET ASP.NET Core Web
+      API. I am always eager to learn new skills and take on challenging
+      projects. In my free time, I love exploring new technologies, contributing
+      to open-source projects, and sharing my knowledge with the developer
+      community. Let's build something amazing together!
+    </p>
+    <div class="resume_btn_group">
+      <button type="button" mat-flat-button>
+        <span>Resume</span>
+        <mat-icon [svgIcon]="'download'"></mat-icon>
+      </button>
+      <button type="button" mat-stroked-button routerLink="/about-me">
+        <span>About me</span>
+        <mat-icon [svgIcon]="'person'"></mat-icon>
+      </button>
+    </div>
+
+    <div class="flex gap-x-32">
+      @for (item of socialMedia; track $index) {
+      <a
+        [ngClass]="item.type"
+        mat-mini-fab
+        role="button"
+        [href]="item.link"
+        target="_blank"
+      >
+        <mat-icon [svgIcon]="item.icon"></mat-icon>
+      </a>
+      }
+    </div>
+  </div>
+  <div>
+    <img
+      [ngClass]="imageSize()"
+      src="/assets/img/Bannerdev_laptop.svg"
+      alt="developer"
+    />
+  </div>
+</div>
+
+<!-- =============Skills============ -->
+<div>
+  <div [ngClass]="[textSize(), 'text_center']">
+    <span>My</span>&nbsp;<span class="name">Skills</span>
+  </div>
+  <div [ngClass]="skillGrid()">
+    @for (item of skills; track $index) {
+    <mat-card appearance="outlined">
+      <mat-card-content class="h-full">
+        <div
+          class="flex flex-col-rev justify-center items-center h-full text_center"
+        >
+          <mat-card-subtitle>{{ item.skill }}</mat-card-subtitle>
+          <mat-icon [svgIcon]="item.icon"></mat-icon>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</div>

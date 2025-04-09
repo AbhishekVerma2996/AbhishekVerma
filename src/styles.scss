@@ -1,1 +1,160 @@
-/* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+
+// ===========Google Font============
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+:root {
+  --screen: 100vh;
+  --full: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Sora,
+      density: -2,
+    )
+  );
+
+  @include mat.theme-overrides(
+    (
+      "body-small": 12px,
+      "body-medium": 16px,
+      "body-large": 20px,
+      "headline-small": 16px,
+      "headline-medium": 20px,
+      "headline-large": 24px,
+      "display-large": 48px,
+      "display-medium": 40px,
+      "display-small": 32px,
+      "title-large": 36px,
+      "title-medium": 32px,
+      "title-small": 28px,
+      "primary": #000000,
+      "secondary-container": #e4e4e7,
+      "surface-container-highest": #71717a,
+      "secondary": #f4f4f5,
+      "error": #ef4444,
+    )
+  );
+} /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: var(--screen);
+}
+body {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+}
+
+.text-stroke {
+  color: var(--mat-sys-primary);
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke: 1px var(--mat-sys-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  height: calc(var(--screen) - 170px);
+  margin-bottom: 16px;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid-container {
+  padding: 40px 30px;
+}
+
+.grid-container_sm {
+  padding: 40px 0;
+}
+
+.order_last {
+  order: 2;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-col-rev {
+  flex-direction: column-reverse;
+}
+
+.gap-x-32 {
+  gap: 0 32px;
+}
+
+.text_center {
+  text-align: center;
+  margin-bottom: var(--mat-sys-body-medium);
+}
+
+.h-full {
+  height: var(--full);
+}
+
+.w-full {
+  width: var(--full);
+}
+
+.mb-3 {
+  margin-bottom: 80px;
+}
+
+.intro_title {
+  font-size: var(--mat-sys-display-large);
+  line-height: 1.5;
+  .name {
+    font-weight: 800;
+  }
+}
+
+.intro_title_sm {
+  font-size: var(--mat-sys-title-small);
+}
+
+.outlined_mini_fab {
+  color: var(--mat-sys-primary) !important;
+  border: 2px solid var(--mat-sys-primary) !important;
+  margin-bottom: 16px;
+  // ==========Mini Fab button===========
+  @include mat.fab-overrides(
+    (
+      extended-container-height: 56px,
+      container-shape: 4px,
+      small-container-color: transparent,
+      small-container-elevation-shadow: 0,
+      small-hover-state-layer-opacity: 0,
+    )
+  );
+}
+
+footer {
+  height: 40px;
+  padding: 2px 10px;
+}

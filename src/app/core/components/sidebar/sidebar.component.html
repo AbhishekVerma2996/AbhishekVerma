@@ -1,0 +1,55 @@
+<mat-sidenav-container>
+  <mat-sidenav [opened]="isOpened()" [mode]="sidenaveBehaviour()" #sidebar>
+    <div class="logo">
+      <h4 class="text-stroke">AKM</h4>
+    </div>
+    <mat-nav-list>
+      @for (item of navlinks; track $index) { @if (isOpened()) {
+      <a
+        [routerLink]="item.link"
+        mat-list-item
+        routerLinkActive="active"
+        #rla="routerLinkActive"
+        [activated]="rla.isActive"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <span matListItemTitle>{{ item.label }}</span>
+        <mat-icon matListItemIcon [svgIcon]="item.icon"></mat-icon>
+      </a>
+      }@else {
+      <a
+        [routerLink]="item.link"
+        mat-list-item
+        routerLinkActive="active"
+        #rla="routerLinkActive"
+        [activated]="rla.isActive"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="sidebar.toggle()"
+      >
+        <span matListItemTitle>{{ item.label }}</span>
+        <mat-icon matListItemIcon [svgIcon]="item.icon"></mat-icon>
+      </a>
+      } }
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <div class="flex items-center">
+          <button (click)="sidebar.toggle()" type="button" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+          </button>
+          @if (!isOpened()) {
+          <span class="text-stroke">AKM</span>
+          }
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-card appearance="outlined" class="container">
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

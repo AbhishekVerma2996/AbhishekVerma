@@ -1,0 +1,21 @@
+<section class="about_section">
+  <div [ngClass]="[textSize(), 'text_center']">
+    <span>My</span>&nbsp;<span class="text-stroke">Experience</span>
+  </div>
+
+  <div>
+    @for (item of experiences; track $index) {
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <div>
+          <div>
+            <mat-card-title>{{ item.companyName }}</mat-card-title>
+          </div>
+          <mat-card-subtitle>{{ item.designation }}</mat-card-subtitle>
+        </div>
+        <p>{{ item.responsibility }}</p>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</section>
