@@ -1,1 +1,53 @@
-<p>contact works!</p>
+<div [ngClass]="[gridContainer(), 'h-full']">
+  <div>
+    <form>
+      <mat-form-field class="w-full">
+        <mat-label>Your name</mat-label>
+        <input matInput placeholder="Your name" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Emaill address</mat-label>
+        <input matInput placeholder="Email address" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Your website (if exists)</mat-label>
+        <input matInput placeholder="Your website (if exists)" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full textarea">
+        <mat-label>How can I help?</mat-label>
+        <textarea matInput placeholder="How can I help?"></textarea>
+      </mat-form-field>
+
+      <div class="flex items-center gap-x-32">
+        <button type="submit" mat-flat-button>Get In Touch</button>
+        @for (item of socialMedia; track $index) {
+        <a
+          [ngClass]="item.type"
+          mat-mini-fab
+          role="button"
+          [href]="item.link"
+          target="_blank"
+        >
+          <mat-icon [svgIcon]="item.icon"></mat-icon>
+        </a>
+        }
+      </div>
+    </form>
+  </div>
+  <div>
+    <h1>Let's <span class="text-stroke">talk</span> for</h1>
+    <h1>Something special</h1>
+    <p>
+      I seek to push the limits of creativity to create high-engaging,
+      user-friendly, and memorable interactive experiences.
+    </p>
+    <div>
+      <a class="mail_address" href="mailto:ayushkrishanmandal@gmail.com"
+        >ayushkrishanmandal&#x40;gmail.com</a
+      >
+    </div>
+  </div>
+</div>

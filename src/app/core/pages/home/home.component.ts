@@ -22,21 +22,21 @@ export class HomeComponent {
   private responsiveService = inject(ResponsiveService);
 
   public imageSize = computed(() => {
-    if (this.responsiveService.$large()) {
+    if (this.responsiveService.$large() || this.responsiveService.$xLarge()) {
       return 'mat-mdc-card-xl-image';
     }
     return 'img_sm';
   });
 
   public textSize = computed(() => {
-    if (this.responsiveService.$large()) {
+    if (this.responsiveService.$large() || this.responsiveService.$xLarge()) {
       return 'intro_title';
     }
     return 'intro_title_sm';
   });
 
   public gridOrder = computed(() => {
-    if (this.responsiveService.$large()) {
+    if (this.responsiveService.$large() || this.responsiveService.$xLarge()) {
       return '';
     }
     return 'order_last';
@@ -46,17 +46,17 @@ export class HomeComponent {
     {
       icon: 'facebook',
       link: 'https://facebook.com',
-      type: '',
+      type: 'social_media',
     },
     {
       icon: 'linkedin',
       link: 'https://facebook.com',
-      type: 'outlined_mini_fab',
+      type: 'outlined_mini_fab social_media',
     },
     {
       icon: 'instagram',
       link: 'https://facebook.com',
-      type: 'outlined_mini_fab',
+      type: 'outlined_mini_fab social_media',
     },
   ];
 
@@ -96,14 +96,14 @@ export class HomeComponent {
   ];
 
   skillGrid = computed(() => {
-    if (this.responsiveService.$large()) {
+    if (this.responsiveService.$large() || this.responsiveService.$xLarge()) {
       return 'skill_sets';
     }
     return 'skill_sets_sm';
   });
 
   gridContainer = computed(() => {
-    if (this.responsiveService.$large()) {
+    if (this.responsiveService.$large() || this.responsiveService.$xLarge()) {
       return 'grid-container';
     }
     return 'grid-container_sm';

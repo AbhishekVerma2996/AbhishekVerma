@@ -1,31 +1,30 @@
-<section class="about_section">
-  <div [ngClass]="[textSize(), 'text_center']">
-    <span>My</span>&nbsp;<span class="text-stroke">Experience</span>
+<div class="grid" [ngClass]="[aboutSection()]">
+  <div class="about_banner_col">
+    <img src="/assets/img/banner_about.svg" alt="about_banner" />
   </div>
-
   <div>
-    @for (item of experiences; track $index) {
-    <mat-card appearance="outlined">
-      <mat-card-content>
-        <div>
-          <div class="flex items-center justify-between w-full">
-            <mat-card-title>{{ item.companyName }}</mat-card-title>
-            <p>Present</p>
-          </div>
-          <mat-card-subtitle>{{ item.designation }}</mat-card-subtitle>
-        </div>
-        <p>{{ item.responsibility }}</p>
-        <mat-list>
-          <div mat-subheader>Tech stack I learned and worked</div>
-          @for (stack of item.techStack; track $index) {
-          <mat-list-item>
-            <mat-icon [svgIcon]="stack.icon" matListItemIcon></mat-icon>
-            <p matListItemTitle>{{ stack.label }}</p>
-          </mat-list-item>
-          }
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-    }
+    <div [ngClass]="[textSize(), 'text_center']">
+      <span>About</span>&nbsp;<span class="text-stroke">Me</span>
+    </div>
+    <p>
+      I'm a passionate, self-proclaimed designer who specializes in full stack
+      development (.NET and Angular). I am very enthusiastic about bringing the
+      technical and visual aspects of digital products to life. User experience,
+      pixel perfect design, and writing clear, readable, highly performant code
+      matters to me.
+    </p>
+    <p>
+      I began my journey as a web developer in 2019, and since then, I've
+      continued to grow and evolve as a developer, taking on new challenges and
+      learning the latest technologies along the way. Now, in my early thirties,
+      6 years after starting my web development journey, I'm building
+      cutting-edge web applications using modern technologies such as Next.js,
+      TypeScript, Angular, Tailwindcss, Angular material and much more.
+    </p>
+    <p>
+      When I'm not in full-on developer mode, you can find me hovering around on
+      twitter or on indie hacker, witnessing the journey of early startups or
+      enjoying some free time. You can follow me on GitHub.
+    </p>
   </div>
-</section>
+</div>
