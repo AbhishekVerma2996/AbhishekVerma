@@ -1,0 +1,32 @@
+<section [ngClass]="experienceSection()">
+  <div [ngClass]="[textSize(), 'text_center']">
+    <span>My</span>&nbsp;<span class="text-stroke">Experience</span>
+  </div>
+
+  <div>
+    @for (item of experiences; track $index) {
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <div class="flex items-center w-full">
+          <img [src]="item.companyLogo" mat-card-avatar alt="logo" />
+          <div class="flex items-center justify-between w-full flex-wrap">
+            <mat-card-title>{{ item.companyName }}</mat-card-title>
+            <p>{{ item.startTime | date }} - {{ item.endTime | date }}</p>
+          </div>
+        </div>
+        <mat-card-subtitle>{{ item.designation }}</mat-card-subtitle>
+        <p>{{ item.responsibility }}</p>
+        <mat-list>
+          <div mat-subheader>Tech stack I learned and worked</div>
+          @for (stack of item.techStack; track $index) {
+          <mat-list-item>
+            <mat-icon [svgIcon]="stack.icon" matListItemIcon></mat-icon>
+            <p matListItemTitle>{{ stack.label }}</p>
+          </mat-list-item>
+          }
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</section>

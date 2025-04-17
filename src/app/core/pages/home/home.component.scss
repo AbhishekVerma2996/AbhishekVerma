@@ -16,13 +16,8 @@ button:nth-child(even) {
 }
 
 .img_sm {
-  width: 332px;
-  height: 332px;
-}
-
-a:has(:not(.outlined_mini_fab)) {
-  color: var(--mat-sys-surface-container-lowest);
-  margin-bottom: 16px;
+  width: 300px;
+  height: 300px;
 }
 
 .resume_btn_group {
@@ -93,15 +88,15 @@ a:has(:not(.outlined_mini_fab)) {
 
   mat-card {
     cursor: pointer;
-    height: 186px;
-    width: 186px;
+    height: 130px;
+    width: 130px;
 
     mat-card-subtitle {
       margin-top: 16px;
     }
 
     mat-icon {
-      transform: scale(2.5);
+      transform: scale(1.5);
     }
   }
   @include mat.card-overrides(

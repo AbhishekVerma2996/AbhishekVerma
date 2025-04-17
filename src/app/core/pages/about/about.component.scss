@@ -1,20 +1,23 @@
 @use "@angular/material" as mat;
 
 .about_section {
-  margin: 60px 80px;
+  margin: 10px 80px;
+  img[alt="about_banner"] {
+    width: 525px;
+  }
 }
 
 .about_section_sm {
   margin: 0;
+  img[alt="about_banner"] {
+    width: 343px;
+  }
+
+  .about_banner_col {
+    margin: 0 auto;
+  }
 }
 
-mat-card {
-  margin-bottom: 16px;
-
-  @include mat.card-overrides(
-    (
-      outlined-container-shape: 10px,
-      subtitle-text-color: var(--mat-sys-surface-container-highest),
-    )
-  );
+p {
+  margin-bottom: 20px;
 }

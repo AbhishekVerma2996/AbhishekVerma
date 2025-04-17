@@ -10,6 +10,7 @@ export class ResponsiveService {
 
   private screenwidth = toSignal(
     this.breakpointObserver.observe([
+      Breakpoints.XLarge,
       Breakpoints.Large,
       Breakpoints.Medium,
       Breakpoints.Small,
@@ -19,4 +20,5 @@ export class ResponsiveService {
   $small = computed(() => this.screenwidth()?.breakpoints[Breakpoints.XSmall]);
   $medium = computed(() => this.screenwidth()?.breakpoints[Breakpoints.Medium]);
   $large = computed(() => this.screenwidth()?.breakpoints[Breakpoints.Large]);
+  $xLarge = computed(() => this.screenwidth()?.breakpoints[Breakpoints.XLarge]);
 }

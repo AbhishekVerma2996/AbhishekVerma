@@ -14,7 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ResponsiveService } from '../../services/responsive.service';
-import { FooterComponent } from "../footer/footer.component";
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -28,8 +28,8 @@ import { FooterComponent } from "../footer/footer.component";
     MatListModule,
     RouterLink,
     RouterLinkActive,
-    FooterComponent
-],
+    FooterComponent,
+  ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -49,6 +49,11 @@ export class SidebarComponent implements OnInit {
       label: 'About',
       icon: 'person',
       link: '/about-me',
+    },
+    {
+      label: 'My Experieces',
+      icon: 'briefcase',
+      link: '/my-experiences',
     },
     {
       label: 'My projects',
@@ -123,16 +128,22 @@ export class SidebarComponent implements OnInit {
       svg: '/assets/icons/firebase.svg',
       name: 'firebase',
     },
+    {
+      svg: '/assets/icons/briefcase.svg',
+      name: 'briefcase',
+    },
   ];
 
   sidenaveBehaviour = computed(() => {
-    if (this.responsiveService.$large()) {
+    if (this.responsiveService.$large() || this.responsiveService.$xLarge()) {
       return 'side';
     }
     return 'over';
   });
 
-  isOpened = computed(() => this.responsiveService.$large());
+  isOpened = computed(
+    () => this.responsiveService.$large() || this.responsiveService.$xLarge()
+  );
 
   ngOnInit(): void {
     // ======Register custom icons=========
