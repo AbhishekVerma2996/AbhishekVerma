@@ -1,9 +1,7 @@
 <div class="grid items-center mb-3" [ngClass]="gridContainer()">
   <div [ngClass]="gridOrder()">
     <div [ngClass]="textSize()">
-      <span>Hello I'm</span>&nbsp;<span class="name"
-        >Ayush Krishan Mandal.</span
-      >
+      <span>Hello I'm</span>&nbsp;<span class="name">Abhishek Verma.</span>
     </div>
     <div [ngClass]="textSize()">
       <span>Fullstack</span>&nbsp;<span class="text-stroke">Developer</span>
@@ -21,10 +19,11 @@
       community. Let's build something amazing together!
     </p>
     <div class="resume_btn_group">
-      <button type="button" mat-flat-button>
+      <a mat-flat-button href="assets/files/Abhishek-Verma-Resume.pdf" download="Abhishek-Verma-Resume.pdf"
+        role="button">
         <span>Resume</span>
         <mat-icon [svgIcon]="'download'"></mat-icon>
-      </button>
+      </a>
       <button type="button" mat-stroked-button routerLink="/about-me">
         <span>About me</span>
         <mat-icon [svgIcon]="'person'"></mat-icon>
@@ -33,24 +32,14 @@
 
     <div class="flex gap-x-32">
       @for (item of socialMedia; track $index) {
-      <a
-        [ngClass]="item.type"
-        mat-mini-fab
-        role="button"
-        [href]="item.link"
-        target="_blank"
-      >
+      <a [ngClass]="item.type" mat-mini-fab role="button" [href]="item.link" target="_blank">
         <mat-icon [svgIcon]="item.icon"></mat-icon>
       </a>
       }
     </div>
   </div>
   <div>
-    <img
-      [ngClass]="imageSize()"
-      src="/assets/img/Bannerdev_laptop.svg"
-      alt="developer"
-    />
+    <img [ngClass]="imageSize()" src="/assets/img/Bannerdev_laptop.svg" alt="developer" />
   </div>
 </div>
 
@@ -63,9 +52,7 @@
     @for (item of skills; track $index) {
     <mat-card appearance="outlined">
       <mat-card-content class="h-full">
-        <div
-          class="flex flex-col-rev justify-center items-center h-full text_center"
-        >
+        <div class="flex flex-col-rev justify-center items-center h-full text_center">
           <mat-card-subtitle>{{ item.skill }}</mat-card-subtitle>
           <mat-icon [svgIcon]="item.icon"></mat-icon>
         </div>

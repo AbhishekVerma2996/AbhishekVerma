@@ -50,12 +50,12 @@ export class HomeComponent {
     },
     {
       icon: 'linkedin',
-      link: 'https://facebook.com',
+      link: 'https://www.linkedin.com/in/abhishek-verma-b34113163',
       type: 'outlined_mini_fab social_media',
     },
     {
       icon: 'instagram',
-      link: 'https://facebook.com',
+      link: 'https://www.instagram.com',
       type: 'outlined_mini_fab social_media',
     },
   ];
@@ -65,10 +65,10 @@ export class HomeComponent {
       skill: 'ASPNET Core Web API',
       icon: 'dotnet',
     },
-    {
-      skill: 'Firebase',
-      icon: 'firebase',
-    },
+    // {
+    //   skill: 'Firebase',
+    //   icon: 'firebase',
+    // },
     {
       skill: 'Angular',
       icon: 'angular',

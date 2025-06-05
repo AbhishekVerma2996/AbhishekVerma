@@ -1,0 +1,33 @@
+@use "@angular/material" as mat;
+
+.experience_section {
+  margin: 60px 80px;
+}
+
+.experience_section_sm {
+  margin: 0;
+}
+
+mat-card {
+  margin-bottom: 16px;
+
+  @include mat.card-overrides(
+    (
+      outlined-container-shape: 10px,
+      subtitle-text-color: var(--mat-sys-surface-container-highest),
+    )
+  );
+}
+
+img[alt="logo"] {
+  margin-bottom: 5px;
+  margin-right: 16px;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* or 'cover' depending on your need */
+  background-color: white; /* optional for visibility */
+  border-radius: 8px; /* optional for consistent rounded feel */
+}

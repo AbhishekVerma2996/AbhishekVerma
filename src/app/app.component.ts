@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   animations: [],
 })
 export class AppComponent {
-  title = 'ayush-krishan-mandal';
+  title = 'abhishek-verma';
 }

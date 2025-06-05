@@ -13,7 +13,7 @@ export const routes: Routes = [
           import('./core/pages/home/home.component').then(
             (c) => c.HomeComponent
           ),
-        title: 'AKM | Home',
+        title: 'AV | Home',
         data: { animation: 'HomePage' },
       },
       {
@@ -22,7 +22,7 @@ export const routes: Routes = [
           import('./core/pages/about/about.component').then(
             (c) => c.AboutComponent
           ),
-        title: 'AKM | About me',
+        title: 'AV | About me',
         data: { animation: 'AboutPage' },
       },
       {
@@ -31,7 +31,7 @@ export const routes: Routes = [
           import('./core/pages/experience/experience.component').then(
             (c) => c.ExperienceComponent
           ),
-        title: 'AKM | My Experiences',
+        title: 'AV | My Experiences',
         data: { animation: 'ExperiencePage' },
       },
       {
@@ -40,7 +40,7 @@ export const routes: Routes = [
           import('./core/pages/projects/projects.component').then(
             (c) => c.ProjectsComponent
           ),
-        title: 'AKM | My projects',
+        title: 'AV | My projects',
         data: { animation: 'ProjectsPage' },
       },
       {
@@ -49,7 +49,7 @@ export const routes: Routes = [
           import('./core/pages/contact/contact.component').then(
             (c) => c.ContactComponent
           ),
-        title: 'AKM | Contact me',
+        title: 'AV | Contact me',
         data: { animation: 'ContactPage' },
       },
     ],
@@ -57,7 +57,7 @@ export const routes: Routes = [
   {
     path: '**',
     component: PageNotFoundComponent,
-    title: 'AKM | Page not found',
+    title: 'AV | Page not found',
     data: { animation: 'PageNotFound' },
   },
 ];

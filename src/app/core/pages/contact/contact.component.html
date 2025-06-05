@@ -1,25 +1,25 @@
 <div [ngClass]="[gridContainer(), 'h-full']">
   <div>
-    <form>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
       <mat-form-field class="w-full">
-        <mat-label>Your name</mat-label>
-        <input matInput placeholder="Your name" />
-      </mat-form-field>
+    <mat-label>Your name</mat-label>
+    <input matInput placeholder="Your name" formControlName="name" />
+  </mat-form-field>
 
-      <mat-form-field class="w-full">
-        <mat-label>Emaill address</mat-label>
-        <input matInput placeholder="Email address" />
-      </mat-form-field>
+  <mat-form-field class="w-full">
+    <mat-label>Email address</mat-label>
+    <input matInput placeholder="Email address" formControlName="email" />
+  </mat-form-field>
 
-      <mat-form-field class="w-full">
-        <mat-label>Your website (if exists)</mat-label>
-        <input matInput placeholder="Your website (if exists)" />
-      </mat-form-field>
+  <mat-form-field class="w-full">
+    <mat-label>Your website (if exists)</mat-label>
+    <input matInput placeholder="Your website (if exists)" formControlName="website" />
+  </mat-form-field>
 
-      <mat-form-field class="w-full textarea">
-        <mat-label>How can I help?</mat-label>
-        <textarea matInput placeholder="How can I help?"></textarea>
-      </mat-form-field>
+  <mat-form-field class="w-full textarea">
+    <mat-label>How can I help?</mat-label>
+    <textarea matInput placeholder="How can I help?" formControlName="message"></textarea>
+  </mat-form-field>
 
       <div class="flex items-center gap-x-32">
         <button type="submit" mat-flat-button>Get In Touch</button>
@@ -45,8 +45,8 @@
       user-friendly, and memorable interactive experiences.
     </p>
     <div>
-      <a class="mail_address" href="mailto:ayushkrishanmandal@gmail.com"
-        >ayushkrishanmandal&#x40;gmail.com</a
+      <a class="mail_address" href="mailto:av243029@gmail.com"
+        >av243029&#x40;gmail.com</a
       >
     </div>
   </div>

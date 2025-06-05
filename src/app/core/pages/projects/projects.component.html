@@ -1,3 +1,31 @@
-<div class="flex justify-center items-center h-full w-full">
-  <h2>Will update soon.</h2>
-</div>
+<section [ngClass]="experienceSection()">
+  <div [ngClass]="[textSize(), 'text_center']">
+    <span>My</span>&nbsp;<span class="text-stroke">Projects</span>
+  </div>
+
+  <div>
+    @for (item of projects; track $index) {
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <div class="flex items-center w-full">
+          <img [src]="item.companyLogo" mat-card-avatar alt="logo" class="logo-img" />
+          <div class="flex items-center justify-between w-full flex-wrap">
+            <mat-card-title>{{ item.companyName }}</mat-card-title>
+            <p>{{ item.startTime | date }} - {{ item.endTime | date }}</p>
+          </div>
+        </div>
+        <p>{{ item.projectTitle }}</p>
+        <p style="font-size: 15px; margin-top: 2px;margin-bottom: 2px;">{{ item.projDescription }}</p>
+        <mat-card-subtitle>Role: {{ item.designation }}</mat-card-subtitle>
+        <mat-list>
+          @for (stack of item.workList; track $index) {
+          <mat-list-item>
+            <p matListItemTitle>{{ stack }}</p>
+          </mat-list-item>
+          }
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+</section>

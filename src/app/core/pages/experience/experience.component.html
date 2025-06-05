@@ -8,7 +8,7 @@
     <mat-card appearance="outlined">
       <mat-card-content>
         <div class="flex items-center w-full">
-          <img [src]="item.companyLogo" mat-card-avatar alt="logo" />
+          <img [src]="item.companyLogo" mat-card-avatar alt="logo" class="logo-img" />
           <div class="flex items-center justify-between w-full flex-wrap">
             <mat-card-title>{{ item.companyName }}</mat-card-title>
             <p>{{ item.startTime | date }} - {{ item.endTime | date }}</p>

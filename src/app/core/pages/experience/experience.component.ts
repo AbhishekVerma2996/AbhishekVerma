@@ -51,52 +51,52 @@ export class ExperienceComponent {
           label: 'Angular Material',
         },
       ],
-      startTime: new Date('2023-01-23'),
+      startTime: new Date('2022-02-7'),
       endTime: Date.now(),
     },
     {
-      companyName: 'DZentra Pvt Ltd',
+      companyName: 'Ommzi Solutions Pvt Ltd',
       companyLogo:
-        'https://internshala.com/cached_uploads/logo/616a7589d7faa1634366857.png',
+        'https://www.ommzi.com/wp-content/uploads/2017/07/logo.png',
       responsibility:
-        'Create a monitoring tool dashboard, Create charts and visual graphics for the dashboard.',
-      designation: 'ReactJs Developer - Internship',
+        'Worked on the UI design, setting up different environments and game stages.',
+      designation: 'Frontend Game Developer',
       techStack: [
         {
-          icon: 'reactjs',
-          label: 'ReactJs',
+          icon: 'code',
+          label: 'C#',
         },
-        {
-          icon: 'bootstrap',
-          label: 'Bootstrap',
-        },
+        // {
+        //   icon: 'bootstrap',
+        //   label: 'Bootstrap',
+        // },
       ],
-      startTime: new Date('2022-09-22'),
-      endTime: new Date('2023-04-15'),
+      startTime: new Date('2018-07-08'),
+      endTime: new Date('2019-02-21'),
     },
     {
-      companyName: 'Koshur Store',
+      companyName: 'Quark Software Inc.',
       companyLogo:
-        'https://images.yourstory.com/cs/images/companies/f34ce989c1be-download-1637763711440.jpg',
+        'https://www.quark.com/assets/LOGO-RGB_Quark-Corporate-2023_DARK-R_v7-2.webp',
       responsibility:
-        'Creating the pages in ReactJs for the store app and handling the backend in firebase. Whole application is based on online store to deliver the items to customer.',
-      designation: 'Junior ReactJs Developer - Internship',
+        'Worked on QuarkXPress, a page layout and graphic design software used for creating and publishing materials across print, web, e-readers, and other digital media, supporting 21 languages',
+      designation: 'Software Developer - Internship',
       techStack: [
         {
-          icon: 'reactjs',
-          label: 'ReactJs',
+          icon: 'code',
+          label: 'C++',
         },
-        {
-          icon: 'firebase',
-          label: 'Firebase',
-        },
-        {
-          icon: 'bootstrap',
-          label: 'Bootstrap',
-        },
+        // {
+        //   icon: 'firebase',
+        //   label: 'Firebase',
+        // },
+        // {
+        //   icon: 'bootstrap',
+        //   label: 'Bootstrap',
+        // },
       ],
-      startTime: new Date('2022-02-08'),
-      endTime: new Date('2022-08-08'),
+      startTime: new Date('2018-01-01'),
+      endTime: new Date('2018-06-30'),
     },
   ];
 

@@ -23,3 +23,11 @@ img[alt="logo"] {
   margin-bottom: 5px;
   margin-right: 16px;
 }
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* or 'cover' depending on your need */
+  background-color: white; /* optional for visibility */
+  border-radius: 8px; /* optional for consistent rounded feel */
+}
